@@ -1,4 +1,4 @@
-# Copyright 2019 JanusGraph Authors
+# Copyright 2020 JanusGraph Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,29 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-language: bash
-services: docker
-
-matrix:
-  include:
-    - os: linux
-      env: VERSION=0.2
-    - os: linux
-      env: VERSION=0.3
-    - os: linux
-      env: VERSION=0.4
-    - os: linux
-      env: VERSION=0.5
-
-script:
-  - bash build-images.sh $VERSION
-
-after_script:
-  - docker images
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; bash push-images.sh $VERSION
-  on:
-    branch: master
+\.gitignore, Apache-2.0
+README.md, Apache-2.0
+BUILDING.md, Apache-2.0
+AUTHORS.txt, Apache-2.0
+DCO.txt, Apache-2.0
+.csproj, Apache-2.0
+CC-BY-4.0.txt, Apache-2.0
+CONTRIBUTORS.txt, Apache-2.0
+appsettings.json, Apache-2.0

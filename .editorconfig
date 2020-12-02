@@ -12,9 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-gremlin.graph=org.janusgraph.core.JanusGraphFactory
+root = true
 
-storage.backend=berkeleyje
-storage.directory=/var/lib/janusgraph/data
-index.default.backend=lucene
-index.default.directory=/var/lib/janusgraph/index
+[*]
+charset = utf-8
+indent_style = space
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.xml]
+indent_size = 4
+insert_final_newline = false
+
+[*.sh]
+indent_size = 4
+
+[*.{yml,yaml}]
+indent_size = 2
