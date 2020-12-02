@@ -26,9 +26,9 @@ if ! [ -z "${JANUS_SERVER_TIMEOUT:-}" ]; then
 fi
 
 for f in /docker-entrypoint-initdb.d/*; do
-  case "$f" in
-    *.groovy) echo "$0: running $f"; ${JANUS_HOME}/bin/gremlin.sh -e "$f"; echo ;;
-    *)        echo "$0: ignoring $f" ;;
-  esac
-  echo
+    case "$f" in
+        *.groovy) echo "$0: running $f"; ${JANUS_HOME}/bin/gremlin.sh -e "$f"; echo ;;
+        *)        echo "$0: ignoring $f" ;;
+    esac
+    echo
 done
